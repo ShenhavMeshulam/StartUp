@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
-const instance = axios.create({
-    baseURL: 'http://localhost:3000',
-});
+import axios from '../axios';
 
 export default ({ className }) => {
-    const [c, setC] = useState('');
+    const [response, setResponse] = useState('');
 
     useEffect(() => {
-        yyy()
-    }, [c]);
-
-    const yyy = async () => {
-        const d = await instance.get('/')
-        // await axios.get('http://localhost:3000')
-        setC(d.data);
-    }
+        (async () => {
+            const d = await axios.get('/')
+            setResponse(d.data);
+        })()
+    }, []);
 
     return (<div className={className}>
-        <h1>{c}</h1>
+        <h1>{response}</h1>
     </div>);
 };
