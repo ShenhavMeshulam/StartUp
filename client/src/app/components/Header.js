@@ -28,8 +28,8 @@ export default ({ OnSidenavButtonClick }) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6">
-          Synctal
-          </Typography>
+          StartUp
+        </Typography>
       </Toolbar>
     </AppBar>
   );
