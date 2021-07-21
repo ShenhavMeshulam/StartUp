@@ -1,5 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from '../axios';
 
 export default ({ className }) => {
-    return (<div className={className}><h1>Work logs page</h1></div>);
+    const [response, setResponse] = useState('');
+
+    useEffect(() => {
+        (async () => {
+            const d = await axios.get('/page1')
+            setResponse(d.data);
+        })()
+    }, []);
+
+    return (<div className={className}>
+        <h1>{response}</h1>
+    </div>);
 };

@@ -9,16 +9,16 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get('/WorkLogs', (req, res) => {
-    res.send('Work Logs')
+app.get('/page1', (req, res) => {
+    res.send('hii i`m page 1!')
 })
 
-app.get('/Workers', (req, res) => {
-    res.send('Workers')
+app.get('/page2', (req, res) => {
+    res.send('hii i`m page 2!')
 })
 
-app.get('/Sites', (req, res) => {
-    res.send('Hello World!')
+app.get('/page3', (req, res) => {
+    res.send('hii i`m page 3!')
 })
 
 app.use(function (req, res, next) {
