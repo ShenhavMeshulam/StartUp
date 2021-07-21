@@ -7,9 +7,7 @@ import Menu from './Menu';
 import HomePage from './HomePage/HomePage';
 
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import WorkLogs from './WorkLogs/WorkLogs';
-import Workers from './Workers/Workers';
-import Sites from './Sites/Sites';
+import MenuItems from './MenuItems';
 
 const useStyles = makeStyles(() => ({
   app: {
@@ -46,11 +44,12 @@ export default () => {
         <Header OnSidenavButtonClick={handleSidenavClickButton} />
         <div className={classes.contet}>
           <Menu isOpen={sidenavOpen} />
-          <HomePage></HomePage>
-          {/* <Route exact path="/" component={HomePage} />
-          <Route path="/WorkLogs" component={WorkLogs} />
-          <Route path="/Workers" component={Workers} />
-          <Route path="/Sites" component={Sites} /> */}
+          <Route exact path="/" component={HomePage} />
+          {
+            MenuItems.map(x => {
+              return < Route path={x.route} component={x.routeComponent} />
+            })
+          }
         </div>
       </Box>
     </Router>
