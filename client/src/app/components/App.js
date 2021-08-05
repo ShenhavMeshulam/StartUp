@@ -14,12 +14,17 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
-    width: '100%'
+    width: '100%',
+    position: 'absolute'
   },
   contet: {
     display: 'flex',
     flexDirection: 'row',
-    height: '100%'
+    width: '100%',
+    position: 'absolute',
+    top: '64px',
+    bottom: '0',
+
   },
   homePage: {
     paddingLeft: '50px',
