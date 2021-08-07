@@ -10,8 +10,11 @@ const useStyles = makeStyles(() => ({
         background: ' aquamarine',
         height: '100%',
         width: '100%',
-        marginLeft: '10px'
     },
+    content: {
+        marginLeft: '10px',
+        wordWrap: 'break-word'
+    }
 }));
 
 export default ({ className }) => {
@@ -20,34 +23,37 @@ export default ({ className }) => {
 
     useEffect(() => {
         (async () => {
-            const d = await axios.get('/json')
+            const d = await axios.get('/json/1')
             console.log(d.data)
             setResponse(d.data.item);
         })()
     }, []);
 
-    return (<div className={`${className} ${classes.app}`}>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-        <h1>{response}</h1>
-    </div>);
+    return (
+        <div className={`${className} ${classes.app}`}>
+            <div className={classes.content}>
+                <h1>{response}11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+                <h1>{response}</h1>
+            </div>
+        </div>);
 };

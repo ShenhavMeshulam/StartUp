@@ -6,7 +6,7 @@ export default ({ className }) => {
 
     useEffect(() => {
         (async () => {
-            const d = await axios.get('/page3')
+            const d = await axios.get('/basic/page3')
             setResponse(d.data);
         })()
     }, []);
