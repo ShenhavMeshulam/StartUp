@@ -20,6 +20,6 @@ var cb2 = function (req, res) {
     res.send('Hello from C!')
 }
 
-router.get('/example/c', cb0, cb1, cb2)
+router.get('/', cb0, cb1, cb2)
 
 export default router;

@@ -1,9 +1,8 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 
 const router = express.Router();
 
-router.use(bodyParser.json());
+router.use(express.json());
 
 let items = [1, 2, 3, 4, 5];
 

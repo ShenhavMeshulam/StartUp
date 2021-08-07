@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-router.get('/json', (req, res) => {
+router.get('/1', (req, res) => {
     var value = {
         "item": 222222,
         "shenhav": "meshulam"
@@ -9,7 +9,7 @@ router.get('/json', (req, res) => {
     res.send(value);
 })
 
-router.get('/json2 ', (req, res) => {
+router.get('/2 ', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ a: 1 }));
 })
